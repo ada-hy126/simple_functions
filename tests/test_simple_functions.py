@@ -1,6 +1,8 @@
 import pytest
 
-from simple_functions import my_sum, factorial
+import numpy as np
+
+from simple_functions import my_sum, factorial, sin
 
 
 class TestSimpleFunctions:
@@ -23,3 +25,10 @@ class TestSimpleFunctions:
     def test_factorial(self, number, expected):
         """factorial is right for small numbers, including 0! = 1."""
         assert factorial(number) == expected
+
+    @pytest.mark.parametrize('x', [
+        0.0, 0.5, 1.0, -1.0, np.pi / 2, 10.0, 100.0, -50.0,
+    ])
+    def test_sin(self, x):
+        """sin's Taylor series matches numpy's sin, including large x."""
+        assert sin(x) == pytest.approx(np.sin(x), abs=1e-12)
