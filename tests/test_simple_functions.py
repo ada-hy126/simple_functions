@@ -13,7 +13,7 @@ class TestSimpleFunctions:
     def test_my_sum(self, iterable, expected):
         """my_sum adds up the items of lists and tuples."""
         assert my_sum(iterable) == expected
-    
+
     @pytest.mark.parametrize('number, expected', [
         (5, 120),
         (3, 6),
