@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"
 license-files = ["LICENSE"]
-authors = [{ name = "Your Name", email = "your.email@imperial.ac.uk" }]
+authors = [{ name = "ada-hy126", email = "hy126@ic.ac.uk" }]
 dependencies = ["numpy"]
 
 [project.optional-dependencies]
